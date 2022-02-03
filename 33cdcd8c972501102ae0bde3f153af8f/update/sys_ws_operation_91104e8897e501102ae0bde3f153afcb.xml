@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Inbound Slack Action</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    try {
+        var req = JSON.parse(request.queryParams.payload);
+        var actionName = '';
+
+        switch (req.type) {
+            case 'dialog_submission':
+            case 'interactive_message':
+            case 'message_action':
+                actionName = req.callback_id;
+                break;
+            case 'view_submission':
+                actionName = req.view.callback_id;
+                break;
+            case 'block_actions':
+                actionName = req.actions[0].value !== undefined ? req.actions[0].value : req.actions[0].selected_option.value;
+                break;
+            default:
+                throw new Error('Inbound Slack Action: unknown request type "' + req.type + '".');
+        }
+
+        var handlerGr = new GlideRecord('x_383043_slack_h_slack_handler');
+        handlerGr.addQuery('action_name=' + actionName + '^action_type=' + req.type);
+        handlerGr.query();
+        if (!handlerGr.next()) throw new Error('Inbound Slack Action: unknown handler for type "' + req.type + '" and action "' + actionName + '".');
+
+        var evaluator = new GlideScopedEvaluator();
+        var ack = evaluator.evaluateScript(handlerGr, 'handler', {
+            request: req
+        });
+		
+		gs.info(ack);
+
+        if (ack) {
+            var writer = response.getStreamWriter();
+            response.setHeaders({
+                'Content-Type': 'application/json'
+            });
+            writer.writeString(JSON.stringify(ack));
+        }
+
+    } catch (ex) {
+        gs.error('Inbound Slack Action exception ' + JSON.stringify(ex));
+    }
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_383043_slack_h/slack_action_processor</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-03 18:41:09</sys_created_on>
+        <sys_id>91104e8897e501102ae0bde3f153afcb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Inbound Slack Action</sys_name>
+        <sys_package display_value="Slack Handler" source="x_383043_slack_h">33cdcd8c972501102ae0bde3f153af8f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slack Handler">33cdcd8c972501102ae0bde3f153af8f</sys_scope>
+        <sys_update_name>sys_ws_operation_91104e8897e501102ae0bde3f153afcb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-03 19:27:23</sys_updated_on>
+        <web_service_definition display_value="Slack Action Processor">bebf798897e501102ae0bde3f153af48</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

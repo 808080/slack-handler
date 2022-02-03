@@ -10,6 +10,6 @@
                 <element inactive_on_update="false" label="View submission" value="view_submission"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" label="Handler" max_length="4000" name="handler" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="(function( /*Slack request payload*/ payload) {&#13;&#10;&#13;&#10;    // return a valid slack object for acknowledged response&#13;&#10;&#13;&#10;})(payload);" label="Handler" max_length="4000" name="handler" type="script"/>
     </element>
 </database>
