@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="action_type" table="x_383043_slack_h_slack_handler" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>action_type</element>
+            <name>x_383043_slack_h_slack_handler</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-03 15:21:29</sys_created_on>
+            <sys_id>e7531148976501102ae0bde3f153afd1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>action_type</sys_name>
+            <sys_package display_value="Slack Handler" source="x_383043_slack_h">33cdcd8c972501102ae0bde3f153af8f</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Slack Handler">33cdcd8c972501102ae0bde3f153af8f</sys_scope>
+            <sys_update_name>sys_choice_x_383043_slack_h_slack_handler_action_type</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-03 15:21:29</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Block actions</label>
+            <language>en</language>
+            <name>x_383043_slack_h_slack_handler</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-03 15:21:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ab531148976501102ae0bde3f153afd0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-03 15:21:29</sys_updated_on>
+            <value>block_actions</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Dialog submission</label>
+            <language>en</language>
+            <name>x_383043_slack_h_slack_handler</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-03 15:21:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>af531148976501102ae0bde3f153afd6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-03 15:21:29</sys_updated_on>
+            <value>dialog_submission</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Interactive message</label>
+            <language>en</language>
+            <name>x_383043_slack_h_slack_handler</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-03 15:21:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a7531148976501102ae0bde3f153afd9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-03 15:21:29</sys_updated_on>
+            <value>interactive_message</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Message action</label>
+            <language>en</language>
+            <name>x_383043_slack_h_slack_handler</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-03 15:21:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>af531148976501102ae0bde3f153afdb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-03 15:21:29</sys_updated_on>
+            <value>message_action</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>action_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>View submission</label>
+            <language>en</language>
+            <name>x_383043_slack_h_slack_handler</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-02-03 15:21:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a7531148976501102ae0bde3f153afd4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-02-03 15:21:29</sys_updated_on>
+            <value>view_submission</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

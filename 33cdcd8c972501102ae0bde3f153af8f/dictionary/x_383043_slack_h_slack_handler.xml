@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Slack Handler" max_length="40" name="x_383043_slack_h_slack_handler" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Action Name" max_length="40" name="action_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="block_actions" label="Action Type" max_length="40" name="action_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Block actions" value="block_actions"/>
+                <element inactive_on_update="false" label="Dialog submission" value="dialog_submission"/>
+                <element inactive_on_update="false" label="Interactive message" value="interactive_message"/>
+                <element inactive_on_update="false" label="Message action" value="message_action"/>
+                <element inactive_on_update="false" label="View submission" value="view_submission"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Handler" max_length="4000" name="handler" type="string"/>
+    </element>
+</database>

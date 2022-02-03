@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>action_name</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-03 15:21:30</sys_created_on>
+        <sys_data_policy display_value="Sets the Action Name field to mandatory">af531148976501102ae0bde3f153afe4</sys_data_policy>
+        <sys_id>67531148976501102ae0bde3f153afe7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>action_name</sys_name>
+        <sys_package display_value="Slack Handler" source="x_383043_slack_h">33cdcd8c972501102ae0bde3f153af8f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slack Handler">33cdcd8c972501102ae0bde3f153af8f</sys_scope>
+        <sys_update_name>sys_data_policy_rule_67531148976501102ae0bde3f153afe7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-03 15:21:30</sys_updated_on>
+        <table>x_383043_slack_h_slack_handler</table>
+    </sys_data_policy_rule>
+</record_update>
