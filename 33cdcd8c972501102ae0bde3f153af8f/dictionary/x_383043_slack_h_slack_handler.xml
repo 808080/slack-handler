@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Slack Handler" max_length="40" name="x_383043_slack_h_slack_handler" type="collection">
+    <element label="Slack Handler" max_length="40" name="x_383043_slack_h_slack_handler" sizeclass="0" type="collection">
         <element attributes="edge_encryption_enabled=true" display="true" label="Action Name" max_length="40" name="action_name" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="block_actions" label="Action Type" max_length="40" name="action_type" type="choice">
             <choice>
@@ -10,6 +10,6 @@
                 <element inactive_on_update="false" label="View submission" value="view_submission"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" default="(function( /*Slack request payload*/ payload) {&#13;&#10;&#13;&#10;    // return a valid slack object for acknowledged response&#13;&#10;&#13;&#10;})(payload);" label="Handler" max_length="4000" name="handler" type="script"/>
+        <element attributes="edge_encryption_enabled=true" default="(function( /*Slack request payload*/ payload) {&#13;&#10;    var body = JSON.parse(payload);&#13;&#10;&#13;&#10;    // return a valid slack object for acknowledged response&#13;&#10;&#13;&#10;})(payload);" label="Handler" max_length="4000" name="handler" type="script"/>
     </element>
 </database>
